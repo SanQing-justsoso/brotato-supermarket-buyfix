@@ -23,5 +23,8 @@ This is a fixed build of [url=https://steamcommunity.com/sharedfiles/filedetails
 [b]改动说明 / Changelog[/b]
 1.0.6 → 1.0.7：修复超市购买崩溃（仅改动 extensions/ui/menus/shop/shop.gd 中一个函数）/ fix the supermarket buy crash (single-function change in extensions/ui/menus/shop/shop.gd).
 
+[b]源码 / Source[/b]
+GitHub（完整源码与修复 diff / full source and the fix diff）：[url=https://github.com/SanQing-justsoso/brotato-supermarket-buyfix]github.com/SanQing-justsoso/brotato-supermarket-buyfix[/url]
+
 [b]致谢 / Credits[/b]
 原版 Original mod: duyang97 / ercjul / Virtuoso（Supermarket 1.0.6）。购买修复 Buy fix: galaxyxin。原版工坊页: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3759466719]steamcommunity.com/sharedfiles/filedetails/?id=3759466719[/url]
