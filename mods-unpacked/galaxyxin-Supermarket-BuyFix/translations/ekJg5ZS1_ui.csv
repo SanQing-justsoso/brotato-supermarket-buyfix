@@ -1,0 +1,22 @@
+keys,en,zh_Hans_CN
+ModName_supermarket_ekJg5ZS1,Supermarket,超市
+ekJg5ZS1_DESCRIPTION_1_0,Introduction,简介
+ekJg5ZS1_DESCRIPTION_1_1,Show more items in the store.,在商店中显示更多物品
+ekJg5ZS1_DESCRIPTION_2_0,Usage,用法
+ekJg5ZS1_DESCRIPTION_2_1,"In the shop, click on the top button.",在商店，点击最上方的按钮
+ekJg5ZS1_DESCRIPTION_3_0,Warning,警告
+ekJg5ZS1_DESCRIPTION_3_1,This mod will almost completely eliminate the randomness of the game and make the difficulty of the game extremely low.,这个mod会使游戏的随机性几乎完全消失，以及游戏难度变得极低。
+ekJg5ZS1_FILTER_UI_ALL,all,全部
+ekJg5ZS1_FILTER_UI_VANILLA,vanilla,原版
+ekJg5ZS1_FILTER_UI_TYPE,type,类型
+ekJg5ZS1_FILTER_UI_CLASS,class,种类
+ekJg5ZS1_FILTER_UI_SPECIAL_EFFECTS,special effects,特殊效果
+ekJg5ZS1_FILTER_UI_IGNORE,ignore,忽略
+ekJg5ZS1_FILTER_UI_INCLUDE,include,包含
+ekJg5ZS1_FILTER_UI_EXCLUDE,exclude,排除
+ekJg5ZS1_FILTER_UI_CLEAR,clear,清空
+ekJg5ZS1_FILTER_UI_PROMPT_1,Please click on the stats on the right side,请点击右侧属性
+ekJg5ZS1_WHOLESALE,Wholesale,批发
+ekJg5ZS1_TIP,Tip,提示
+ekJg5ZS1_TIP_CONTENT_LONG_PRESS_BUY,"Repeated purchase, please press and hold the purchase button for 3 seconds",重复购买请长按购买按钮3秒
+ekJg5ZS1_MARKET,Market,超市

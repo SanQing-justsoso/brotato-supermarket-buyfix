@@ -1,0 +1,17 @@
+{
+	"name": "Supermarket-BuyFix",
+	"namespace": "galaxyxin",
+	"version_number": "1.0.7",
+	"description": "[rainbow freq=0.3 sat=10 val=20][wave amp=50 freq=2]Supermarket BuyFix[/wave][/rainbow]\nSupermarket 1.0.6 (Virtuoso fix, original by duyang97 / ercjul) with a fix for a hard crash when buying from the supermarket UI on game 1.1.12.x beta builds.\nBuying in the supermarket panel used to call ShopItem._on_BuyButton_pressed() on a hidden pooled card, which re-enters the card's own button wiring and infinitely recurses (stack overflow -> game closes). Purchases now call the ShopItemsContainer purchase handler directly, exactly like the vanilla shelf buy. All other behavior is unchanged.\n超市 1.0.6(Virtuoso 修复版)的购买崩溃修复版:原版在超市界面点击购买会因隐藏卡片的按钮处理器自递归爆栈导致游戏闪退,已改为直连商店容器购买(与原版货架购买同一入口),其余功能不变。原作者:duyang97 / ercjul / Virtuoso。",
+	"website_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3759466719",
+	"dependencies": [],
+	"extra": {
+		"godot": {
+			"incompatibilities": [],
+			"authors": ["duyang97", "ercjul", "Virtuoso", "galaxyxin(buy fix)"],
+			"compatible_mod_loader_version": ["6.2.0", "6.3.0"],
+			"compatible_game_version": ["1.1.15.4", "1.1.12.0.beta-3"],
+			"config_defaults": {}
+		}
+	}
+}

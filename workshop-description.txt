@@ -1,0 +1,27 @@
+[quote]Supermarket 购买崩溃修复版 / Buy-crash fixed build of Supermarket[/quote]
+
+[b]中文说明[/b]
+本 mod 是 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3759466719]Supermarket[/url]（原作者 duyang97 / ercjul，Virtuoso 修复版 1.0.6）的修复分支，只改了一处：修复在超市界面点击购买导致游戏崩溃（闪退）的问题。
+[list]
+[*]问题：在游戏 1.1.12.x beta 版本上，点击超市购买按钮会触发无限递归并爆栈，游戏直接关闭（已用 macOS 崩溃报告确认是栈溢出，无脚本报错）；
+[*]修复：购买动作改为直接调用 ShopItemsContainer 的原版购买入口（与普通货架购买完全同一路径），不再对隐藏的卡片模拟按钮；
+[*]其余功能、界面、操作与 Supermarket 1.0.6 完全一致；
+[*]兼容：游戏 1.1.15.4 / 1.1.12.0.beta-3，ModLoader 6.2 / 6.3。
+[/list]
+[b]使用方法[/b]：订阅本 mod，并【退订原版 Supermarket】——两个不要同时启用（会往商店界面加两套 UI）。
+
+[b]English[/b]
+This is a fixed build of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3759466719]Supermarket 1.0.6[/url] (original by duyang97 / ercjul, Virtuoso fix). Exactly one thing changed: buying from the supermarket UI no longer hard-crashes the game on 1.1.12.x beta builds.
+[list]
+[*]Bug: clicking buy in the supermarket panel called ShopItem._on_BuyButton_pressed() on a hidden pooled card, which re-entered the card's own button wiring and infinitely recursed (stack overflow - the game closes instantly; confirmed via macOS crash report, no script error is logged);
+[*]Fix: purchases now call the vanilla ShopItemsContainer purchase handler directly - the exact same entry point the normal shelf buy uses;
+[*]Everything else is identical to Supermarket 1.0.6;
+[*]Compatible with game 1.1.15.4 / 1.1.12.0.beta-3, ModLoader 6.2 / 6.3.
+[/list]
+[b]Usage[/b]: subscribe to this mod and UNSUBSCRIBE from the original Supermarket - do not run both (both add UI to the shop screen).
+
+[b]改动说明 / Changelog[/b]
+1.0.6 → 1.0.7：修复超市购买崩溃（仅改动 extensions/ui/menus/shop/shop.gd 中一个函数）/ fix the supermarket buy crash (single-function change in extensions/ui/menus/shop/shop.gd).
+
+[b]致谢 / Credits[/b]
+原版 Original mod: duyang97 / ercjul / Virtuoso（Supermarket 1.0.6）。购买修复 Buy fix: galaxyxin。原版工坊页: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3759466719]steamcommunity.com/sharedfiles/filedetails/?id=3759466719[/url]

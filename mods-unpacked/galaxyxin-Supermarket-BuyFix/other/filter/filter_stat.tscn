@@ -1,0 +1,163 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://particles/sprites/particle_23.png" type="Texture" id=1]
+[ext_resource path="res://mods-unpacked/galaxyxin-Supermarket-BuyFix/other/filter/filter_stat.gd" type="Script" id=2]
+[ext_resource path="res://resources/fonts/actual/base/font_22.tres" type="DynamicFont" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.501961 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 1, 1, 1, 0 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 1, 1, 1, 0.784314 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 1, 1, 1, 0 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 1, 1, 1, 0.784314 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 1, 1, 1, 0.313726 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 1, 1, 1, 0 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 1, 1, 1, 0.784314 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 0, 0, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 0, 0, 0.313726 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 1, 1, 1, 0 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 1, 0, 0, 0.784314 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="PanelContainer" type="PanelContainer"]
+margin_right = 14.0
+margin_bottom = 14.0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 210.0
+margin_bottom = 48.0
+custom_constants/separation = 4
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 210.0
+margin_bottom = 24.0
+grow_horizontal = 0
+custom_fonts/font = ExtResource( 3 )
+text = "STAT_HEALTH"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 28.0
+margin_right = 210.0
+margin_bottom = 48.0
+custom_constants/separation = 4
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+margin_right = 48.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 48, 0 )
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+
+[node name="increase" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 52.0
+margin_right = 104.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 52, 0 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_styles/focus = SubResource( 7 )
+toggle_mode = true
+text = "+"
+
+[node name="reduce" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 108.0
+margin_right = 160.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 52, 0 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_styles/focus = SubResource( 8 )
+toggle_mode = true
+text = "-"
+
+[node name="NOT" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 164.0
+margin_right = 186.0
+margin_bottom = 20.0
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/focus = SubResource( 5 )
+text = "N"
+
+[node name="cancel" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 190.0
+margin_right = 210.0
+margin_bottom = 20.0
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 4 )
+text = "X"
+
+[connection signal="toggled" from="VBoxContainer/HBoxContainer/increase" to="." method="_on_increase_toggled"]
+[connection signal="toggled" from="VBoxContainer/HBoxContainer/reduce" to="." method="_on_reduce_toggled"]
+[connection signal="mouse_entered" from="VBoxContainer/HBoxContainer/NOT" to="." method="_on_NOT_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/NOT" to="." method="_on_NOT_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/HBoxContainer/cancel" to="." method="_on_cancel_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/cancel" to="." method="_on_cancel_pressed"]

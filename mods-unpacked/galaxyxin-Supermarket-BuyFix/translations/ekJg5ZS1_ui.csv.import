@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://mods-unpacked/galaxyxin-Supermarket-BuyFix/translations/ekJg5ZS1_ui.en.translation", "res://mods-unpacked/galaxyxin-Supermarket-BuyFix/translations/ekJg5ZS1_ui.zh_Hans_CN.translation" ]
+
+source_file="res://mods-unpacked/galaxyxin-Supermarket-BuyFix/translations/ekJg5ZS1_ui.csv"
+dest_files=[ "res://mods-unpacked/galaxyxin-Supermarket-BuyFix/translations/ekJg5ZS1_ui.en.translation", "res://mods-unpacked/galaxyxin-Supermarket-BuyFix/translations/ekJg5ZS1_ui.zh_Hans_CN.translation" ]
+
+[params]
+
+compress=true
+delimiter=0
